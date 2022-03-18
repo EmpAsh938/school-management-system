@@ -20,6 +20,7 @@ npm run dev
 ### Features
 
 - Authentication
+- Persist state with localstorage
 - CRUD Feature to manage class and section
 - Resposive Web Design
 
