@@ -1,0 +1,78 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  display: flex;
+  background-color: $stone-600;
+  color: $gray-50;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+
+  &__container {
+    height: 100%;
+    padding: 20px 15px;
+    @include flex(column);
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include flex(row);
+    margin-bottom: 20px;
+    h2 {
+      font-size: clamp(1.3rem, 2vw, 1.7rem);
+      font-weight: 500;
+    }
+    button {
+      font-size: 2.2rem;
+      color: $red-400;
+
+      svg {
+        transition: all 0.3s ease;
+        &:hover {
+          transform: rotate(180deg);
+          color: $red-500;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @include flex(column);
+    gap: 20px;
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+  &__logout {
+    button {
+      font-weight: bold;
+      color: $red-400;
+    }
+  }
+}
+
+@include rwd($sm) {
+  .sidebar {
+    position: relative;
+    height: calc(100vh - 12vh);
+    transform: translateX(0);
+    background-color: $gray-50;
+    color: $gray-900;
+    border-top: none;
+
+    &__title {
+      display: none;
+    }
+    &__logout {
+      button {
+        font-weight: bold;
+        color: $red-500;
+      }
+    }
+  }
+}

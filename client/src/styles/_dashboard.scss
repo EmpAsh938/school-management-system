@@ -1,0 +1,47 @@
+.dashboard {
+  padding: 20px;
+  @include flex(row);
+  flex-wrap: wrap;
+  gap: 10px;
+
+  &__box {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    background-color: $blue-400;
+    z-index: -1;
+
+    span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: $gray-50;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-style: oblique;
+      color: $gray-800;
+      font-size: 0.9rem;
+      letter-spacing: 0.8px;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 90%;
+      transform: translate(-50%, -50%);
+      color: $gray-50;
+      opacity: 0.2;
+    }
+  }
+}

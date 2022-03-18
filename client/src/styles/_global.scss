@@ -1,0 +1,30 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: sans-serif, serif;
+  line-height: 1.5;
+}
+
+a,
+li,
+ul {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: inherit;
+  cursor: pointer;
+}

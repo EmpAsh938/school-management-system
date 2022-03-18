@@ -1,0 +1,36 @@
+.section {
+  padding: 0 20px;
+
+  h3 {
+    font-size: 1.5rem;
+    color: $gray-800;
+    margin-bottom: 0.4em;
+  }
+
+  &__form {
+    margin-top: 10px;
+
+    input {
+      outline: none;
+      font-size: 0.9rem;
+      padding: 4px 7px;
+      margin: 5px 0;
+    }
+
+    select {
+      margin: 0 8px;
+      padding: 5px;
+      text-transform: capitalize;
+      font-size: 0.85rem;
+    }
+
+    button {
+      display: block;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      padding: 9px 20px;
+      color: $gray-50;
+      background-color: $blue-500;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.tab {
+  @include flex(row);
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-left: 2px solid $stone-600;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+
+  svg {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+
+  &:hover {
+    border-color: $gray-50;
+  }
+}
+
+@include rwd($sm) {
+  .tab {
+    border-color: $gray-50;
+    &:hover {
+      border-color: $stone-600;
+    }
+  }
+}

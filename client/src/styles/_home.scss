@@ -1,0 +1,10 @@
+.home {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+@include rwd($sm) {
+  .home {
+    grid-template-columns: auto 1fr;
+  }
+}

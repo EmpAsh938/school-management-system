@@ -1,0 +1,62 @@
+.class {
+  padding: 0 20px;
+
+  h3 {
+    font-size: 1.5rem;
+    color: $gray-800;
+    margin-bottom: 0.4em;
+  }
+
+  &__container {
+    @include flex(column);
+    gap: 20px;
+  }
+
+  &__form {
+    h4 {
+      margin-bottom: 5px;
+    }
+    input {
+      outline: none;
+      font-size: 1rem;
+      padding: 5px 8px;
+    }
+    button {
+      margin-left: 1em;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      background-color: $blue-500;
+      color: $gray-50;
+    }
+  }
+
+  &__view {
+    @include flex(column);
+    gap: 10px;
+
+    &--box {
+      max-width: $sm;
+      @include flex(row);
+      justify-content: space-between;
+    }
+  }
+
+  &__action {
+    button {
+      color: $gray-50;
+      font-size: 0.9rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: $gray-50;
+      margin: 0 5px;
+
+      &:first-child {
+        background-color: $green-600;
+      }
+      &:last-child {
+        background-color: $red-600;
+      }
+    }
+  }
+}
