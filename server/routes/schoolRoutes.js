@@ -22,7 +22,7 @@ router.route('/class')
 }).post((req, res) => {
     const {classname} = req.body
     if (!classname) {
-        return req.status(400).json({
+        return res.status(400).json({
             "success": false,
             "message": "fields are empty",
             "body": []
@@ -45,7 +45,7 @@ router.route('/class')
 }).put((req, res) => {
     const {oldclassname, newclassname} = req.body
     if (!oldclassname || !newclassname) {
-        return req.status(400).json({
+        return res.status(400).json({
             "success": false,
             "message": "fields are empty",
             "body": []
@@ -68,7 +68,7 @@ router.route('/class')
 }).delete((req, res) => {
     const {classname} = req.body
     if (!classname) {
-        return req.status(400).json({
+        return res.status(400).json({
             "success": false,
             "message": "fields are empty",
             "body": []
@@ -109,7 +109,6 @@ router.route('/section').get((req, res) => {
     })
 }).post((req, res) => {
     const { classname, sections } = req.body
-    console.log(req.body)
     if (!classname || !sections) {
         return res.status(400).json({
             "success": false,
@@ -133,7 +132,6 @@ router.route('/section').get((req, res) => {
     })
 }).delete((req, res) => {
     const { classname, section } = req.body
-    console.log(req.body)
     if (!classname || !section) {
         return res.status(400).json({
             "success": false,

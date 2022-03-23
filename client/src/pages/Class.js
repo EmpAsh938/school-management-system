@@ -34,10 +34,10 @@ const Class = () => {
   }
 
   const handleDelete = async(value) => {
+    addClassSection(value)
     const result = await deleteRequest('school/class', {classname: value})
     if (typeof result == 'object' && result !== null) {
       handleError(value+" deleted with its all sections.")
-      addClassSection(value)
     } else {
       handleError('Deletion failed')
     }

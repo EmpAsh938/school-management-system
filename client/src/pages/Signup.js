@@ -21,7 +21,7 @@ export const Signup = () => {
         } else {
             const result = await postRequest('user/create', {firstname: firstName, lastname: lastName, email, password
             })
-            if (Array.isArray(result)) {
+            if (typeof result == 'object' && result !== null ) {
                 navigate('/login')
             } else {
                 handleError(result)

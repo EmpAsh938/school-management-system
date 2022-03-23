@@ -32,7 +32,7 @@ const AppProvider = ({children}) => {
         setSchool([...param])
     }
 
-    const addClassSection = (first, second=section) => {
+    const addClassSection = (first, second='') => {
             setClasses(first)
             setSection(second)
     }
