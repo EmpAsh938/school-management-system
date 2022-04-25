@@ -21,12 +21,12 @@ npm run dev
 
 - Authentication
 - Persist state with localstorage
-- CRUD Feature to manage class and section
+- CRUD Feature to manage class, section and students
 - Resposive Web Design
 
 ### Tech Stack
 
-**Frontend**: ReactJS, ContextAPI
+**Frontend**: ReactJS, ContextAPI, SASS
 
 **Backend**: NodeJS, Express
 
