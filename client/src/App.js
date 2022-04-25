@@ -10,6 +10,7 @@ import Class from './pages/Class'
 import Section from './pages/Section'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import Student from './pages/Student'
 import { ProtectedRoute, PublicRoute } from './helper/routes-helper'
 import { LOCAL_STORAGE_KEY, useGlobalContext } from './context'
 
@@ -35,6 +36,7 @@ const App = () => {
                     <Route index element={<Dashboard />} />
                     <Route path='class' element={<Class />} />
                     <Route path='section' element={<Section />} />
+                    <Route path='student' element={<Student />} />
                 </Route>
                 <Route path='login' element={
                     <PublicRoute isUser={isUser}>

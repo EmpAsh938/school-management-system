@@ -9,6 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 8800
 const school = require('./routes/schoolRoutes')
 const user = require('./routes/userRoutes')
+const student = require('./routes/studentRoutes')
 const connection = require('./model/db')
 
 const corsURL = process.env.CORS_URL || ''
@@ -20,13 +21,14 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+// app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
 
 
 
 connection.connect(err => {
-    if (err){
+    if (err) {
         console.log('error connecting: ', err)
         return
     }
@@ -38,4 +40,5 @@ app.listen(PORT, () => {
 })
 
 app.use('/school', school)
+app.use('/student', student)
 app.use('/user', user)

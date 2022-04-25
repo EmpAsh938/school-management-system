@@ -16,6 +16,7 @@ const Home = () => {
   
   useEffect(() => {
     handleRequest()
+    // eslint-disable-next-line
   }, [section, classes])
   return (
     <main className='home'>

@@ -13,10 +13,12 @@ const AppProvider = ({children}) => {
         email: '',
         username: ''
     })
+  const [stdInfo, setStdInfo] = useState({name:'', cname:'', section:'', rollno:''})
     const [school, setSchool] = useState([])
     const [section, setSection] = useState('')
     const [classes, setClasses] = useState('')
     const [isEditing, setIsEditing] = useState(false)
+    const [editId, setEditId] = useState(0)
 
     const toggleSidebar = () => setSidebar(!sidebar)
     const handleError = (msg) => {
@@ -56,15 +58,20 @@ const AppProvider = ({children}) => {
         <AppContext.Provider value={{
             isUser,
             school,
+            stdInfo,
             section,
             classes,
             sidebar,
             isError, 
             isEditing,
             errorMessage,
+            editId,
             logout,
+            setEditId,
+            setStdInfo,
             toggleEdit,
             handleError,
+            setIsEditing,
             handleSchool,
             loginSuccess,
             toggleSidebar,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaHome } from 'react-icons/fa'
-import { MdFormatShapes } from 'react-icons/md'
+import { MdFormatShapes, MdGroups } from 'react-icons/md'
 import { SiGoogleclassroom } from 'react-icons/si'
 import { IoClose } from 'react-icons/io5'
 import Tab from './Tab'
@@ -22,6 +22,7 @@ const Sidebar = () => {
           <Tab path="/" title="dashboard" Icon={FaHome} />
           <Tab path="class" title="manage class" Icon={SiGoogleclassroom} />
           <Tab path="section" title="manage section" Icon={MdFormatShapes} />
+          <Tab path="student" title="manage student" Icon={MdGroups} />
           
         </div>
         </div>

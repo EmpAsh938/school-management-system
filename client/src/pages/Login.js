@@ -47,7 +47,7 @@ export const Login = () => {
                     value={username}
                     onChange={e=>setUsername(e.target.value)}
                     />
-                    <label className={!username ? 'label': 'label active-label'}>Username</label>
+                    <label className={!username ? 'label': 'label active-label'}>Email</label>
                 </div>
                 <div className="login__input">
                     <input 

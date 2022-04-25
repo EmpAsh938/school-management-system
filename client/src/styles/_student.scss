@@ -1,0 +1,36 @@
+.student {
+  padding: 15px;
+  padding-left: 30px;
+
+  &__title--secondary {
+    font-weight: 500;
+  }
+  &__form {
+    max-width: 300px;
+    @include flex(column);
+    gap: 10px;
+    &--div {
+      @include flex(row);
+      align-items: center;
+      justify-content: space-between;
+
+      & > input {
+        font-size: 0.9rem;
+      }
+    }
+
+    & > button {
+      font-size: 0.94rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      background-color: $blue-600;
+      color: $gray-200;
+      padding: 10px 0;
+      border-radius: 5px;
+    }
+  }
+}
+.liststudent {
+  @include flex(column);
+  gap: 5px;
+}

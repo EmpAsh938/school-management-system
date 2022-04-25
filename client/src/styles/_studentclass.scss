@@ -1,0 +1,31 @@
+.studentclass {
+  @include flex(column);
+  gap: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 3px;
+  border-radius: 5px;
+  max-width: 400px;
+  &__top {
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+
+    & > h3 {
+      font-weight: 400;
+    }
+  }
+  &__bottom {
+    @include flex(column);
+    gap: 5px;
+    font-size: 0.8rem;
+    & > div {
+      @include flex(column);
+
+      & > div {
+        @include flex(row);
+        justify-content: space-between;
+      }
+    }
+  }
+}
