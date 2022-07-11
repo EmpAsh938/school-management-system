@@ -6,7 +6,7 @@ This project is built to fulfill the project requirement for BCA 4th semester an
 
 ### Installation
 
-Tips: Run MYSQL and set its config as in server/model/db.js
+Tips: Run MYSQL and set its config as in [server/model/db.js](https://github.com/EmpAsh938/school-management-system/blob/main/server/model/db.js)
 
 ```
 cd school-management-system/client
